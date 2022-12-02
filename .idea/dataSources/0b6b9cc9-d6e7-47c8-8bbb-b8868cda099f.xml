@@ -778,132 +778,191 @@ p3_21700185|schema||p3_21700185||UPDATE|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <table id="240" parent="237" name="students">
+    <table id="240" parent="237" name="RESTAURANT">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <table id="241" parent="237" name="word">
+    <table id="241" parent="237" name="students">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <column id="242" parent="239" name="seq">
+    <table id="242" parent="237" name="word">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8_general_ci</CollationName>
+    </table>
+    <column id="243" parent="239" name="seq">
       <AutoIncrement>19</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="243" parent="239" name="title">
+    <column id="244" parent="239" name="title">
       <DataType>varchar(100)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="244" parent="239" name="writer">
+    <column id="245" parent="239" name="writer">
       <DataType>varchar(20)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="245" parent="239" name="content">
+    <column id="246" parent="239" name="content">
       <DataType>varchar(1000)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="246" parent="239" name="regdate">
+    <column id="247" parent="239" name="regdate">
       <DataType>timestamp|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="247" parent="239" name="cnt">
+    <column id="248" parent="239" name="cnt">
       <DataType>int(11)|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
       <Position>6</Position>
     </column>
-    <column id="248" parent="239" name="category">
+    <column id="249" parent="239" name="category">
       <DataType>varchar(32)|0s</DataType>
       <Position>7</Position>
     </column>
-    <column id="249" parent="239" name="photo">
+    <column id="250" parent="239" name="photo">
       <DataType>varchar(50)|0s</DataType>
       <DefaultExpression>&apos;heart.png&apos;</DefaultExpression>
       <Position>8</Position>
     </column>
-    <column id="250" parent="239" name="lastupdate">
+    <column id="251" parent="239" name="lastupdate">
       <DataType>timestamp|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
-    <index id="251" parent="239" name="PRIMARY">
+    <index id="252" parent="239" name="PRIMARY">
       <ColNames>seq</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="252" parent="239" name="PRIMARY">
+    <key id="253" parent="239" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="253" parent="240" name="id">
+    <column id="254" parent="240" name="seq">
+      <AutoIncrement>1</AutoIncrement>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="255" parent="240" name="name">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>2</Position>
+    </column>
+    <column id="256" parent="240" name="type">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>3</Position>
+    </column>
+    <column id="257" parent="240" name="location">
+      <DataType>varchar(500)|0s</DataType>
+      <Position>4</Position>
+    </column>
+    <column id="258" parent="240" name="dayoff">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>5</Position>
+    </column>
+    <column id="259" parent="240" name="representative">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>6</Position>
+    </column>
+    <column id="260" parent="240" name="grade">
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <Position>7</Position>
+    </column>
+    <column id="261" parent="240" name="evaluation">
+      <DataType>varchar(500)|0s</DataType>
+      <Position>8</Position>
+    </column>
+    <column id="262" parent="240" name="moDate">
+      <DataType>timestamp|0s</DataType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="263" parent="240" name="picture">
+      <DataType>varchar(100)|0s</DataType>
+      <Position>10</Position>
+    </column>
+    <index id="264" parent="240" name="PRIMARY">
+      <ColNames>seq</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="265" parent="240" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="266" parent="241" name="id">
       <AutoIncrement>11</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="254" parent="240" name="name">
+    <column id="267" parent="241" name="name">
       <DataType>varchar(10)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="255" parent="240" name="grade">
+    <column id="268" parent="241" name="grade">
       <DataType>tinyint(4)|0s</DataType>
       <DefaultExpression>1</DefaultExpression>
       <Position>3</Position>
     </column>
-    <column id="256" parent="240" name="RC">
+    <column id="269" parent="241" name="RC">
       <DataType>varchar(20)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="257" parent="240" name="birthday">
+    <column id="270" parent="241" name="birthday">
       <DataType>datetime|0s</DataType>
       <Position>5</Position>
     </column>
-    <index id="258" parent="240" name="PRIMARY">
+    <index id="271" parent="241" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="259" parent="240" name="PRIMARY">
+    <key id="272" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="260" parent="241" name="id">
+    <column id="273" parent="242" name="id">
       <AutoIncrement>2</AutoIncrement>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="261" parent="241" name="level">
+    <column id="274" parent="242" name="level">
       <DataType>tinyint(4)|0s</DataType>
       <DefaultExpression>1</DefaultExpression>
       <Position>2</Position>
     </column>
-    <column id="262" parent="241" name="word">
+    <column id="275" parent="242" name="word">
       <DataType>varchar(40)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="263" parent="241" name="meaning">
+    <column id="276" parent="242" name="meaning">
       <DataType>varchar(100)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="264" parent="241" name="regdate">
+    <column id="277" parent="242" name="regdate">
       <DataType>timestamp|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <index id="265" parent="241" name="PRIMARY">
+    <index id="278" parent="242" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="266" parent="241" name="PRIMARY">
+    <key id="279" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

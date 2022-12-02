@@ -1,0 +1,54 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: 김태홍
+  Date: 2022-12-02
+  Time: 오후 11:05
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
+<html>
+  <head>
+    <title>Title</title>
+  </head>
+  <body>
+    <h1>맛집 소개 페이지</h1>
+    <table id="list" width="90%">
+      <tr>
+        <th>아이디</th>
+        <th>식당이름</th>
+        <th>분류</th>
+        <th>주소</th>
+        <th>휴업일</th>
+        <th>대표메뉴</th>
+        <th>별점</th>
+        <th>한줄평</th>
+        <th>게시일</th>
+        <th>식당사진</th>
+        <th>수정</th>
+        <th>삭제</th>
+      </tr>
+
+      <c:forEach items="${list}" var="u">
+        <tr>
+          <td>${u.seq}</td>
+          <td>${u.name}</td>
+          <td>${u.type}</td>
+          <td>${u.location}</td>
+          <td>${u.dayoff}</td>
+          <td>${u.representative}</td>
+          <td>${u.grade}</td>
+          <td>${u.evaluation}</td>
+          <td>${u.moDate}</td>
+          <td>${u.picture}</td>
+          <td><a href="editform/${u.seq}">수정</a> </td>
+          <td><a href="javascript:delete_ok('${u.seq}')">삭제</a></td>
+        </tr>
+      </c:forEach>
+    </table>
+
+    <br/><a href="add">식당 추가하기</a>
+  </body>
+</html>
