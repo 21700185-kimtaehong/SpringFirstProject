@@ -21,7 +21,8 @@ public class BoardDAO {
 	}
 
 	private final String BOARD_INSERT = "insert into  RESTAURANT(name, type, location, dayoff, representative, grade, evaluation, picture) values (?,?,?,?,?,?,?,?)";
-	private final String BOARD_UPDATE = "update RESTAURANT set name=?, type=?, location=?, dayoff=?, representative=?, grade=?, evaluation=?, moDate=?, picture=? where seq=?";
+	private final String BOARD_UPDATE =
+			"update RESTAURANT set name=?, type=?, location=?, dayoff=?, representative=?, grade=?, evaluation=?, picture=? where seq=?";
 	private final String BOARD_DELETE = "delete from RESTAURANT where seq=?";
 	private final String BOARD_GET = "select * from RESTAURANT where seq=?";
 	private final String BOARD_LIST = "select * from RESTAURANT order by seq desc";
@@ -35,9 +36,11 @@ public class BoardDAO {
 		return jdbcTemplate.update(BOARD_DELETE, new Object[]{seq});
 	}
 
+
 	public int updateBoard(BoardVO vo){
-		return jdbcTemplate.update(BOARD_UPDATE, new Object[]{vo.getName(), vo.getType(),
-				vo.getLocation(), vo.getDayoff(), vo.getRepresentative(), vo.getGrade(), vo.getEvaluation(), vo.getMoDate(), vo.getPicture(), vo.getSeq()});
+		return jdbcTemplate.update(BOARD_UPDATE,
+				new Object[]{vo.getName(), vo.getType(), vo.getLocation(), vo.getDayoff(), vo.getRepresentative(), vo.getGrade(),
+						vo.getEvaluation(), vo.getPicture(), vo.getSeq()});
 	}
 
 	public BoardVO getBoard(int seq){

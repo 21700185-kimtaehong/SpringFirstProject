@@ -37,7 +37,7 @@ public class BoardController {
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String addPost(){
-        return "addpostform";
+        return "addform";
     }
 
     @RequestMapping(value = "/addok", method = RequestMethod.POST)
@@ -49,25 +49,26 @@ public class BoardController {
         return "redirect:list";
     }
 
-    @RequestMapping(value = "/editform/{seq}", method = RequestMethod.GET)
-    public String editPost(@PathVariable("seq") int seq, Model model){ //id를 seq로 바꿨음
-        BoardVO boardVO = boardDAO.getBoard(seq);
-        model.addAttribute("u", boardVO);
+    @RequestMapping(value = "/editform/{id}", method = RequestMethod.GET)
+    public String editPost(@PathVariable("id") int id, Model model){
+        BoardVO boardVO = boardDAO.getBoard(id);
+        model.addAttribute("boardVO", boardVO);
         return "editform";
     }
 
     @RequestMapping(value = "/editok", method = RequestMethod.POST)
     public String editPostOK(BoardVO vo){
-        if(boardDAO.updateBoard(vo) == 0)
+        int i = boardDAO.updateBoard(vo);
+        if(i == 0)
             System.out.println("데이터 수정 실패");
         else
             System.out.println("데이터 수정 성공!!!");
         return "redirect:list";
     }
 
-    @RequestMapping(value = "/deleteok/{seq}", method = RequestMethod.GET)
-    public String deletePostOk(@PathVariable("seq") int seq){
-        if(boardDAO.deleteBoard(seq) == 0)
+    @RequestMapping(value = "/deleteok/{id}", method = RequestMethod.GET)
+    public String deletePostOk(@PathVariable("id") int id){
+        if(boardDAO.deleteBoard(id) == 0)
             System.out.println("데이터 삭제 실패");
         else
             System.out.println("데이터 삭제 성공!!!");
