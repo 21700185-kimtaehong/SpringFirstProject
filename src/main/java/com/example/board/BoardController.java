@@ -31,6 +31,7 @@ public class BoardController {
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String boardlist(Model model){
         model.addAttribute("list", boardDAO.getBoardList());
+        System.out.println(model.getAttribute("list"));
         return "list";
     }
 

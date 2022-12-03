@@ -20,8 +20,7 @@ public class BoardDAO {
 		this.jdbcTemplate = jdbcTemplate;
 	}
 
-	private final String BOARD_INSERT = "insert into RESTAURANT " +
-			"(name, type, location, dayoff, representative, grade, evaluation, picture) values (?,?,?,?,?,?,?,?)";
+	private final String BOARD_INSERT = "insert into  RESTAURANT(name, type, location, dayoff, representative, grade, evaluation, picture) values (?,?,?,?,?,?,?,?)";
 	private final String BOARD_UPDATE = "update RESTAURANT set name=?, type=?, location=?, dayoff=?, representative=?, grade=?, evaluation=?, moDate=?, picture=? where seq=?";
 	private final String BOARD_DELETE = "delete from RESTAURANT where seq=?";
 	private final String BOARD_GET = "select * from RESTAURANT where seq=?";
@@ -66,41 +65,5 @@ public class BoardDAO {
 			}
 		});
 	}
-
-
-//	public int insertBoard(BoardVO vo){
-//		String sql = "insert into RESTAURANT " +
-//				"(name, type, location, dayoff, representative, grade, evaluation, picture) values ("
-//				+ "'" + vo.getName() + "',"
-//				+ "'" + vo.getType() + "',"
-//				+ "'" + vo.getLocation() + "',"
-//				+ "'" + vo.getDayoff() + "',"
-//				+ "'" + vo.getRepresentative() + "',"
-//				+ "'" + vo.getGrade() + "',"
-//				+ "'" + vo.getEvaluation() + "',"
-//				+ "'" + vo.getPicture() + "')";
-//		return jdbcTemplate.update(sql);
-//	}
-//
-//	public int deleteBoard(int seq){
-//		String sql = "delete from RESTAURANT where seq" + seq;
-//		return jdbcTemplate.update(sql);
-//	}
-//
-//	public int updateBoard(BoardVO vo){
-//		String sql = "update RESTAURANT set title=" +vo.getName() + "',"
-//				+ " type='" + vo.getType() + "',"
-//				+ " location='" + vo.getLocation() + "',"
-//				+ " dayoff='" + vo.getDayoff() + "',"
-//				+ " representative='" + vo.getRepresentative() + "',"
-//				+ " grade='" + vo.getGrade() + "',"
-//				+ " evaluation='" + vo.getEvaluation() + "',"
-//				+ " moDate='" + vo.getMoDate() + "',"
-//				+ " picture='" + vo.getPicture() + "' where seq=" + vo.getSeq();
-//
-//		return jdbcTemplate.update(sql);
-//	}
-
-
 
 }
