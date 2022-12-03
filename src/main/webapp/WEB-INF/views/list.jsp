@@ -66,7 +66,7 @@
           <td>${u.moDate}</td>
           <td><img src="./img/${u.picture}" width="150" /></td>
           <td><a href="editform/${u.seq}">수정</a> </td>
-          <td><a href="javascript:delete_ok('${u.seq}')">삭제</a></td>
+          <td><a href="deleteok/${u.seq}">삭제</a></td>
         </tr>
       </c:forEach>
     </table>
