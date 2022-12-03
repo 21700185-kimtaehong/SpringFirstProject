@@ -79,6 +79,7 @@ public class BoardVO {
 	}
 
 	public Date getMoDate() {
+//		System.out.println(this.moDate);
 		return moDate;
 	}
 
